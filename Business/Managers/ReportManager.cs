@@ -22,23 +22,23 @@ public class ReportManager : IReportService, IDisposable
         parameters.Add("startingDate", startingDate);
         parameters.Add("lastDate", lastDate);
         var result = await _connection.QueryFirstOrDefaultAsync<PaymentDensity>(
-            "sp_PaymentDensityForCompany", parameters, commandType: CommandType.StoredProcedure);
+            "dbo.sp_PaymentDensityForCompany", parameters, commandType: CommandType.StoredProcedure);
         return result;
     }
 
     public async Task<PaymentDensity> GetDailyPaymentDensityForCompany()
     {
-        return await GetPaymentDensityForCompany(DateTime.Today.AddDays(-1), DateTime.Today);
+        return await GetPaymentDensityForCompany(DateTime.UtcNow.Date, DateTime.UtcNow.Date.AddDays(1));
     }
 
     public async Task<PaymentDensity> GetWeeklyPaymentDensityForCompany()
     {
-        return await GetPaymentDensityForCompany(DateTime.Today.AddDays(-7), DateTime.Today);
+        return await GetPaymentDensityForCompany(DateTime.UtcNow.Date.AddDays(-6), DateTime.UtcNow.Date.AddDays(1));
     }
 
     public async Task<PaymentDensity> GetMonthlyPaymentDensityForCompany()
     {
-        return await GetPaymentDensityForCompany(DateTime.Today.AddMonths(-1), DateTime.Today);
+        return await GetPaymentDensityForCompany(DateTime.UtcNow.Date.AddMonths(-1), DateTime.UtcNow.Date.AddDays(1));
     }
 
     public async Task<PaymentDensity> GetPaymentDensityForEmployee(int userId, DateTime startingDate, DateTime lastDate)
@@ -54,17 +54,17 @@ public class ReportManager : IReportService, IDisposable
 
     public async Task<PaymentDensity> GetDailyPaymentDensityForEmployee(int userId)
     {
-        return await GetPaymentDensityForEmployee(userId, DateTime.Today.AddDays(-1), DateTime.Today);
+        return await GetPaymentDensityForEmployee(userId, DateTime.UtcNow.Date ,DateTime.UtcNow.Date.AddDays(1));
     }
 
     public async Task<PaymentDensity> GetWeeklyPaymentDensityForEmployee(int userId)
     {
-        return await GetPaymentDensityForEmployee(userId, DateTime.Today.AddDays(-7), DateTime.Today);
+        return await GetPaymentDensityForEmployee(userId, DateTime.UtcNow.Date.AddDays(-6), DateTime.UtcNow.Date.AddDays(1));
     }
 
     public async Task<PaymentDensity> GetMonthlyPaymentDensityForEmployee(int userId)
     {
-        return await GetPaymentDensityForEmployee(userId, DateTime.Today.AddMonths(-1), DateTime.Today);
+        return await GetPaymentDensityForEmployee(userId, DateTime.UtcNow.Date.AddMonths(-1), DateTime.UtcNow.Date.AddDays(1));
     }
 
     public void Dispose()
