@@ -102,13 +102,14 @@ Yapılan harcamalardaki ödeme yöntemine ilişkin işlemler için sadece **Admi
 
 Ödeme yöntemleri için aşağıdaki endpoint adresleri kullanılır:
 
+
 |     Method    |     Path                         |     Açıklama                                                                                                                                                                      |
 |---------------|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `GET`       |     `/api/payment-methods`         |     Bütün ödeme   yöntemleri getirir.                                                                                                                                             |
-|     `GET`       |    ` /api/payment-methods/{id}`    |     Belirtilen id değerine göre ödeme yöntemini   getirir.                                                                                                                        |
-|     `POST`      |     `/api/payment-methods`         |     Yeni bir   ödeme yöntemi oluşturur.      Tek kural Name   alanı gereklidir.                                                                                                   |
-|     `PUT`       |     `/api/payment-methods/{id}`    |     Belirtilen id değerine göre ödeme yöntemi   bilgilerini günceller.                                                                                                            |
-|     `DELETE`    |    ` /api/payment-methods/{id}`    |     Belirtilen   id değerine göre ödeme yöntemini siler.  <br/>NOT: Eğer bu ödeme   yöntemi ile masraf girişi yapılmışsa ödeme yöntemi ilgili masraflar   silinmeden silenemez.    |
+|     `GET`       |  `/api/payment-methods`  &nbsp; &nbsp; &nbsp; |     Bütün ödeme   yöntemleri getirir.                                                                                                                                             |
+|     `GET`       |  `/api/payment-methods/{id}`  &nbsp; &nbsp; &nbsp; |     Belirtilen id değerine göre ödeme yöntemini   getirir.                                                                                                                        |
+|     `POST`      |  `/api/payment-methods`  &nbsp; &nbsp; &nbsp; |     Yeni bir   ödeme yöntemi oluşturur.      Tek kural Name   alanı gereklidir.                                                                                                   |
+|     `PUT`       |  `/api/payment-methods/{id}`  &nbsp; &nbsp; &nbsp; |     Belirtilen id değerine göre ödeme yöntemi   bilgilerini günceller.                                                                                                            |
+|     `DELETE`    |  `/api/payment-methods/{id}`  &nbsp; &nbsp; &nbsp; |     Belirtilen   id değerine göre ödeme yöntemini siler.  <br/>NOT: Eğer bu ödeme   yöntemi ile masraf girişi yapılmışsa ödeme yöntemi ilgili masraflar   silinmeden silenemez.    |
 
 <br />
 
