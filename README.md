@@ -1,5 +1,12 @@
 # MASRAF ÖDEME SİSTEMİ
 
+<br />
+
+Proje için görsel ve açıklamaların bulunduğu pdf için aşağıdaki bağlantıya tıklayanız: <br />
+[Final Case Projesi PDF Dosyası](https://drive.google.com/file/d/1TZI31tD0riKb7YSTc9zUuHk77Xi9Aw2O/view?usp=sharing)
+
+<br />
+
 ## Proje Tanımı
 
 Bir şirket özelinde sahada çalışan personeli için masraf kalemlerinin takibi ve yönetimi için bir uygulama talep edilmektedir. Bu uygulama ile saha da çalışan personel masraflarını anında sisteme girebilecek ve işveren bunu aynı zamanda hem takip edip edebilecek hem de vakit kaybetmeden harcamayı onaylayıp personele ödemesini yapabilecektir. Çalışan hem evrak fiş vb. toplamaktan kurtulmuş olacak hem de uzun süre sahada olduğu durumda gecikmeden ödemesini alabilecektir.
